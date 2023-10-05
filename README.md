@@ -1,7 +1,7 @@
 Nama Kelompok : G.O.A.T
 
 Member :
-1. M Rafif Ramadhan - TW/FE
+1. M Rafif Ramadhan - FEM/FE
 2. M Dzaky Supriatna - FE/UI-UX 
 3. Rakan Danendra Darmawan - FE/SA 
 4. Mhd. Girtianda Lbs - TW/BE 
