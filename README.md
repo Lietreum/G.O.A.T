@@ -1,9 +1,9 @@
 Nama Kelompok : G.O.A.T
 
 Member :
-1. M Rafif - TW/FE
-2. M Dzaky - FE/UI-UX 
-3. Rakan Danendra - FE/SA 
-4. MHD Girtianda - TW/BE 
-5. ZAIDAN - FE/UI-UX 
+1. M Rafif Ramadhan - TW/FE
+2. M Dzaky Supriatna - FE/UI-UX 
+3. Rakan Danendra Darmawan - FE/SA 
+4. Mhd Girtianda LBS - TW/BE 
+5. Zaidan Maulana Ahmad - FE/UI-UX 
 6. Zaky Azhari - BE/FE/TL 
