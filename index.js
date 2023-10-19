@@ -3,15 +3,23 @@ const app = express()
 const port = 7777
 
 app.get('/kol',(req,res) =>{
-  res.send("Kol tersedia")
-})
+  res.json({
+    message: "Ini kol",
+});
+});
 app.post('/kol',(req,res) =>{
-  res.send("Kol yang besar")
-})
+  res.json({
+    message: "Ini kol segar",
+});
+});
 app.put('/kol',(req,res) =>{
-  res.send("Kol baru berstok")
-})
+  res.json({
+    message: "Kol baru berstok",
+});
+});
 app.delete('/kol',(req,res) =>{
-  res.send("Kol nya susah habis")
-})
+  res.json({
+    message: "Kol habis",
+});
+});
 app.listen(port,() => console.log(`Server running on port ${port}`))
