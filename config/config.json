@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "RendraGelo1",
+    "database": "book_store_api_1",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "RendraGelo1",
+    "database": "book_store_api_1",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "RendraGelo1",
+    "database": "book_store_api_1",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
