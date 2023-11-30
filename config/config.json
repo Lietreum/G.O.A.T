@@ -1,22 +1,22 @@
 {
   "development": {
     "username": "postgres",
-    "password": "RendraGelo1",
-    "database": "book_store_api_1",
+    "password": "1234",
+    "database": "book_shop_api",
     "host": "localhost",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
-    "password": "RendraGelo1",
-    "database": "book_store_api_1",
+    "password": "1234",
+    "database": "book_shop_api",
     "host": "localhost",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
-    "password": "RendraGelo1",
-    "database": "book_store_api_1",
+    "password": "1234",
+    "database": "book_shop_api",
     "host": "localhost",
     "dialect": "postgres"
   }

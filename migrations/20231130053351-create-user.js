@@ -15,6 +15,12 @@ module.exports = {
       alamat: {
         type: Sequelize.STRING
       },
+      deskripsi: {
+        type: Sequelize.TEXT
+      },
+      gambar: {
+        type: Sequelize.TEXT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

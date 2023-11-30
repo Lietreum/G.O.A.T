@@ -2,98 +2,101 @@ const { User } = require("../models");
 
 const findAllUsers = async (req, res) => {
   try {
+    //ambil data dari database
     const data = await User.findAll();
+
+    //tampilkan
     res.json({
-      message: "Data retrieved successfully",
+      message: "Ini dari router",
       data: data,
     });
   } catch (error) {
-    res.status(500).json({
-      message: "Error while fetching user data: " + error.message,
+    res.json({
+      message: "error mendapatkan data user",
     });
   }
 };
 
 const detailUser = async (req, res) => {
-  try {
-    let id = parseInt(req.params.id);
-    const data = await User.findByPk(id);
-    if (data) {
-      res.json({
-        message: "User found successfully",
-        data: data,
-      });
-    } else {
-      res.status(404).json({ message: "User not found" });
-    }
-  } catch (error) {
-    res.status(500).json({
-      message: "Error while fetching user data: " + error.message,
-    });
-  }
+  // get id dari request
+  let id = parseInt(req.params.id);
+
+  //ambil data dari database
+  const data = await User.findByPk(id);
+
+  //tampilkan
+  res.json({
+    message: "Ini dari router",
+    data: data,
+  });
 };
 
 const tambahUser = async (req, res) => {
   try {
+    //ambil data dari request
     const data = req.body;
+
+    //insert kedatabase
     const result = await User.create(data);
+
+    //tampilkan status
     res.json({
-      message: "User added successfully",
       result: result,
     });
   } catch (error) {
-    res.status(500).json({
-      message: "Error while adding user: " + error.message,
+    res.json({
+      message: "error :" + error,
     });
   }
 };
 
-const deleteUser = async (req, res) => {
+const hapusUser = async (req, res) => {
   try {
+    //ambil data dari request
     const id = req.body.id;
+
+    //hapus data dari database
     const result = await User.destroy({
       where: {
         id: id,
       },
     });
+
+    //tampilkan status
     res.json({
-      message: "User successfully deleted",
+      message: "Data berhasil dihapus",
     });
   } catch (error) {
-    res.status(500).json({
-      message: "Error while deleting user: " + error.message,
+    res.json({
+      message: "error :" + error,
     });
   }
 };
 
-const updateUser = async (req, res) => {
+const ubahUser = async (req, res) => {
   try {
+    //ambil data dari request
     const id = req.body.id;
+
     const newData = req.body;
-    const result = await User.update(newData, {
+
+    //ubah data dari database
+    const result = await Book.update(newData, {
       where: {
         id: id,
       },
     });
-    if (result[0] === 1) {
-      res.json({
-        message: "User updated successfully",
-        data: newData,
-      });
-    } else {
-      res.status(404).json({ message: "User not found" });
-    }
+
+    //tampilkan status dan data baru
+    res.json({
+      message: "Data berhasil dirubah",
+      data: newData,
+    });
   } catch (error) {
-    res.status(500).json({
-      message: "Error while updating user: " + error.message,
+    res.json({
+      message: "error :" + error,
     });
   }
 };
 
-module.exports = {
-  findAllUsers,
-  detailUser,
-  tambahUser,
-  deleteUser,
-  updateUser,
-};
+module.exports = { findAllUsers, detailUser, tambahUser, hapusUser, ubahUser };
